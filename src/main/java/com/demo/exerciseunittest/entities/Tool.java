@@ -5,13 +5,11 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 
-import java.util.UUID;
-
 @Entity
 public class Tool {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id = UUID.randomUUID().getMostSignificantBits() & Long.MAX_VALUE;
+    private Long id;
 
     private String name = "";
     private String description = "";
